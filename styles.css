@@ -1,0 +1,111 @@
+/* Estilos base (sem mudanças) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    background-color: #663399;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #663399;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+select, input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #663399;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #663399;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #552288;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Estilo para os produtos */
+.produto {
+    background-color: #f0e5ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(10px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.produto h2 {
+    color: #663399;
+}
+
+.produto p {
+    margin: 10px 0;
+}
+
+/* Animação de entrada */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
